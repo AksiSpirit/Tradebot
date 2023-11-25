@@ -1,0 +1,22 @@
+{
+    "token": "discord bot token",
+
+    "secretKey": "qiwi secret key",
+
+    "admin": [
+        {
+            "userid": "admin1 id"
+        },
+        {
+            "userid": "admin2 id"
+        }
+    ],
+
+    "incomeNotificationChannel": "channel id",
+
+    "sellerRole": "role id",
+
+    "orderCategory": "category id",
+
+    "referalMultiplier": 0.05
+}

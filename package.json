@@ -1,0 +1,26 @@
+{
+  "name": "tradebot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AksiSpirit/Tradebot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AksiSpirit/Tradebot/issues"
+  },
+  "homepage": "https://github.com/AksiSpirit/Tradebot#readme",
+  "dependencies": {
+    "@qiwi/bill-payments-node-js-sdk": "^3.2.1",
+    "better-sqlite3": "^8.3.0",
+    "discord.js": "^14.9.0",
+    "node-fetch": "^2.6.9",
+    "node-schedule": "^2.1.1"
+  }
+}
