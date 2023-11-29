@@ -34,3 +34,29 @@ bot.on('ready', async () => {
 	bot.user.setActivity('/start', { type: ActivityType.Watching })
 })
 bot.login(config.token);
+
+
+bot.on('interactionCreate', async (interaction) => {
+	if (interaction.isCommand()) return handleCommand(interaction);
+    if (interaction.isButton()) return handleButton(interaction);
+
+	if (interaction.isModalSubmit()) return handleModalSubmit(interaction);
+})
+
+
+
+async function handleCommand(interaction) {
+    if (interaction.commandName != "start") return;
+	let cmd = require("./commands/start");
+	cmd.execute(interaction, bot, config);
+}
+
+async function handleButton(interaction) {
+    let btn = require("./buttons/" + interaction.customId);
+    btn.execute(interaction, bot, config);
+}
+
+async function handleModalSubmit(interaction) {
+    let modal = require("./modals/" + interaction.customId);
+    modal.execute(interaction, bot, config);
+}
