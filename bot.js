@@ -41,6 +41,7 @@ bot.on('interactionCreate', async (interaction) => {
     if (interaction.isButton()) return handleButton(interaction);
 
 	if (interaction.isModalSubmit()) return handleModalSubmit(interaction);
+    if (interaction.isStringSelectMenu()) return handleStringSelectMenu(interaction);
 })
 
 
@@ -57,6 +58,18 @@ async function handleButton(interaction) {
 }
 
 async function handleModalSubmit(interaction) {
-    let modal = require("./modals/" + interaction.customId);
+    let i;
+    if (interaction.customId != "create_category" &&
+        interaction.customId != "remove_category") {
+        i = interaction.customId.split('splesh')[1]; 
+    } else {
+        i = interaction.customId;
+    }
+    let modal = require("./modals/" + i);
     modal.execute(interaction, bot, config);
+}
+
+async function handleStringSelectMenu(interaction) {
+    let menu = require("./selectmenus/" + interaction.customId);
+    menu.execute(interaction, bot, config);
 }
