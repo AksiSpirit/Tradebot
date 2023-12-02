@@ -60,7 +60,8 @@ async function handleButton(interaction) {
 async function handleModalSubmit(interaction) {
     let i;
     if (interaction.customId != "create_category" &&
-        interaction.customId != "remove_category") {
+        interaction.customId != "remove_category" &&
+        interaction.customId != "balance_add") {
         i = interaction.customId.split('splesh')[1]; 
     } else {
         i = interaction.customId;
@@ -72,4 +73,13 @@ async function handleModalSubmit(interaction) {
 async function handleStringSelectMenu(interaction) {
     let menu = require("./selectmenus/" + interaction.customId);
     menu.execute(interaction, bot, config);
+}
+
+
+global.getUserById = function(id) {
+    let user = db.prepare('SELECT * FROM accounts WHERE id = ?;').get(id);
+    if (user) return user;
+    
+    db.prepare('INSERT INTO accounts (id, balance, spended, buyings) VALUES (?, 0, 0, 0);').run(id);
+    return {id: id, balance: 0, spended: 0, buyings: 0};
 }
