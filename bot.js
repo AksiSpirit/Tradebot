@@ -31,7 +31,10 @@ async function prepareDb() {
 bot.on('ready', async () => {
     prepareDb();
     console.log(`Бот ${bot.user.tag} онлайн`);
-	bot.user.setActivity('/start', { type: ActivityType.Watching })
+	bot.user.setActivity('/start', { type: ActivityType.Watching });
+    bot.application.commands.create({ name: "start", description: "Открыть меню" });
+    const paymentLoop = require('./loops/qiwi');
+    paymentLoop.execute(bot);
 })
 bot.login(config.token);
 
