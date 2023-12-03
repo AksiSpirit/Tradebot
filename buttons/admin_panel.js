@@ -12,7 +12,6 @@ module.exports = {
                     style: 1,
                     custom_id: "admin_profiles"
                 },
-
                 {
                     type: 2,
                     label: "Изменить баланс",
