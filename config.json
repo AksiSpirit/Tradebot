@@ -12,6 +12,8 @@
         }
     ],
 
+    "mainServer": "serverId",
+
     "incomeNotificationChannel": "channel id",
 
     "sellerRole": "role id",
