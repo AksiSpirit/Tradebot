@@ -1,6 +1,6 @@
 module.exports = {
     name: 'remove_product',
-    async execute(interaction, client, config) {
+    async execute(interaction, client) {
         const val = interaction.fields.fields.get('programm_name').value;
         const cid = interaction.customId.split('splesh')[0];
 

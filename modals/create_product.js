@@ -1,6 +1,6 @@
 module.exports = {
     name: 'create_product',
-    async execute(interaction, client, config) {
+    async execute(interaction, client) {
         const name = interaction.fields.fields.get('display_name').value;
         const price = interaction.fields.fields.get('price').value;
         const val = interaction.fields.fields.get('programm_name').value;

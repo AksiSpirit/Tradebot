@@ -1,6 +1,6 @@
 module.exports = {
     name: 'remove_category',
-    async execute(interaction, client, config) {
+    async execute(interaction, client) {
         await interaction.deferUpdate();
         const val = interaction.fields.fields.get('programm_name').value;
 

@@ -1,6 +1,6 @@
 module.exports = {
     name: "create_category",
-    async execute(interaction, client, config) {
+    async execute(interaction, client) {
         const name = interaction.fields.fields.get('display_name').value;
         const id = interaction.fields.fields.get('programm_name').value;
         const imageLink = interaction.fields.fields.get('image_link').value;
