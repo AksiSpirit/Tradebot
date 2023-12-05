@@ -35,6 +35,7 @@ bot.on('ready', async () => {
     bot.application.commands.create({ name: "start", description: "Открыть меню" });
     const paymentLoop = require('./loops/qiwi');
     paymentLoop.execute(bot);
+    await bot.guilds.cache.get(config.mainServer).members.fetch();
 })
 bot.login(config.token);
 
