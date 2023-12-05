@@ -16,7 +16,5 @@
 
     "sellerRole": "role id",
 
-    "orderCategory": "category id",
-
-    "referalMultiplier": 0.05
+    "orderCategory": "category id"
 }

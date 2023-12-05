@@ -1,6 +1,6 @@
 module.exports = {
     name: 'admin_edit_bal',
-    async execute(interaction, client, config) {
+    async execute(interaction, client) {
         await interaction.deferUpdate();
         const id = interaction.fields.fields.get('id').value;
         const bal = interaction.fields.fields.get('bal').value;

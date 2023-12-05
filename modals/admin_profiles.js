@@ -1,6 +1,6 @@
 module.exports = {
     name: 'admin_profiles',
-    async execute(interaction, client, config) {
+    async execute(interaction, client) {
         await interaction.deferUpdate();
         const id = interaction.fields.fields.get('id').value;
 
