@@ -1,4 +1,5 @@
 const { ActivityType, Client, GatewayIntentBits } = require('discord.js');
+const fs = require('fs');
 
 global.config = JSON.parse(fs.readFileSync('./config.json'));
 global.db = require('better-sqlite3')('database.db');
