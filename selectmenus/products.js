@@ -1,6 +1,6 @@
 module.exports = {
     name: 'category',
-    async execute(interaction, client, config) {
+    async execute(interaction, client) {
         const id = interaction.values[0].split('splesh')[1];
         const cid = interaction.values[0].split('splesh')[0];
         if (id == "create_product") {

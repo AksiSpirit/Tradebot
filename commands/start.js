@@ -1,6 +1,6 @@
 module.exports = {
     name: "start",
-    async execute(interaction, client, config) {
+    async execute(interaction, client) {
         let buttons = {
             type: 1,
             components: [

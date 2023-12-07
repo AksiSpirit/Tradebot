@@ -54,12 +54,12 @@ bot.on('interactionCreate', async (interaction) => {
 async function handleCommand(interaction) {
     if (interaction.commandName != "start") return;
 	let cmd = require("./commands/start");
-	cmd.execute(interaction, bot, config);
+	cmd.execute(interaction, bot);
 }
 
 async function handleButton(interaction) {
     let btn = require("./buttons/" + interaction.customId);
-    btn.execute(interaction, bot, config);
+    btn.execute(interaction, bot);
 }
 
 async function handleModalSubmit(interaction) {
@@ -72,12 +72,12 @@ async function handleModalSubmit(interaction) {
         i = interaction.customId;
     }
     let modal = require("./modals/" + i);
-    modal.execute(interaction, bot, config);
+    modal.execute(interaction, bot);
 }
 
 async function handleStringSelectMenu(interaction) {
     let menu = require("./selectmenus/" + interaction.customId);
-    menu.execute(interaction, bot, config);
+    menu.execute(interaction, bot);
 }
 
 

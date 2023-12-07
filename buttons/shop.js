@@ -1,6 +1,6 @@
 module.exports = {
     name: "shop",
-    async execute(interaction, client, config) {
+    async execute(interaction, client) {
         await interaction.deferUpdate();
         let category = db.prepare('SELECT * FROM category;').all();
         let i = 0;
