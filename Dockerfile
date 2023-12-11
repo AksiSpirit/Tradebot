@@ -11,7 +11,6 @@ COPY modals ./
 COPY selectmenus ./
 
 COPY package.json ./
-COPY package-lock.json ./
 COPY bot.js ./
 
 RUN npm i --silent
