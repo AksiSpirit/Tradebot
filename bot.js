@@ -66,7 +66,7 @@ async function handleModalSubmit(interaction) {
     let i;
     if (interaction.customId != "create_category" &&
         interaction.customId != "remove_category" &&
-        interaction.customId != "balance_add") {
+        interaction.customId != "add_balance") {
         i = interaction.customId.split('splesh')[1]; 
     } else {
         i = interaction.customId;
