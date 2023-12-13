@@ -33,20 +33,6 @@ module.exports = {
                             url: 'https://url.com/' + cid + 'splesh' + product.product_value,
                         },
                     }
-                ],
-                components: [
-                    {
-                        type: 1,
-                        components: [
-                            {
-                                type: 2,
-                                label: "Оставить отзыв",
-                                emoji: "🏆",
-                                style: 5,
-                                url: config.feedbackchannel
-                            }
-                        ]
-                    }
                 ]
             }
         );
