@@ -40,7 +40,7 @@ module.exports = {
         let bal = user.balance - product.price;
         let buyings = user.buyings + 1;
         let spended = parseInt(user.spended) + parseInt(product.price);
-        let localOrder = order + 1;
+        let localOrder = parseInt(order) + 1;
         global.order = localOrder;
 
         db.prepare('UPDATE settings SET value = ? WHERE key = ?;').run(localOrder, 'order_index');
