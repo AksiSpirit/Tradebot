@@ -60,7 +60,7 @@ module.exports = {
         db.prepare('UPDATE settings SET value = ? WHERE key = ?;').run(localOrder, 'order_index');
         db.prepare('UPDATE accounts SET balance = ?, buyings = ?, spended = ? WHERE id = ?;').run(bal, buyings, spended, interaction.user.id);
 
-        let guild = client.guilds.cache.get('1088923107730927668');
+        let guild = client.guilds.cache.get(config.mainServer);
         let channel = await guild.channels.create({
             name: `Заказ #${localOrder}`,
             parent: config.orderCategory,
